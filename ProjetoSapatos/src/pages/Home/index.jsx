@@ -1,24 +1,18 @@
-import React from "react"
+import React , {useState} from "react"
 import * as S from "./styles"
-
 import Avatar from "../../images/avatar.png"
-// Importando produtos
 import ImageProduto from "../../images/image1.jpg"
 import ImageProduto2 from "../../images/image-product-2.jpg"
 import ImageProduto3 from "../../images/image-product-3.jpg"
 import ImageProduto4 from "../../images/image-product-4.jpg"
-// ClickCarrinho
 import CarrinhoClick from "../../components/CartAdd"
 import iconH from "../../images/icon-menu.jpg"
-//Ativos
-//import Card from "../../components/CartAdd"
 
 const Home = () => {
-  const [add, setAdd] = React.useState(0)
-  const [Image, setImage] = React.useState(null)
-  const [Estilo, setEstilo] = React.useState(null)
-  const [Carrinho, setCarrinho] = React.useState(false)
-  const [resultAddCart, setResultAddCart] = React.useState(null)
+  const [add, setAdd] = useState(0)
+  const [Image, setImage] = useState(null)
+  const [Carrinho, setCarrinho] = useState(false)
+  const [resultAddCart, setResultAddCart] = useState(null)
 
   function handleClickAddImage({ target }) {
     setImage(target.src)
