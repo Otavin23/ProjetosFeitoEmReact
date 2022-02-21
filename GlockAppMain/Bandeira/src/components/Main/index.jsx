@@ -2,23 +2,15 @@ import React from "react"
 import * as S from "./style"
 import { Link } from "react-router-dom"
 import Information from "../information"
+import UserContext from "../../useContext"
 
-
-const Main = () => {
-  const [result, setResult] = React.useState([])
+const Main = ()=> {
   const [input, setInput] = React.useState("")
   const [select, setSelect] = React.useState("")
-  const [image,setImage] = React.useState([])
 
-  React.useEffect(() => {
-    async function api(url) {
-      const res = await fetch(url)
-      const Json = await res.json()
-      setResult(Json)
-      console.log(Json)
-    }
-    api("https://restcountries.com/v2/all")
-  }, [])
+  const Api = React.useContext(UserContext)
+  const trasformResult = Api.resultado
+
 
   return (
     <S.BackgroundFundo>
@@ -69,10 +61,21 @@ const Main = () => {
         </S.Search>
         <S.World>
           <div className="container-World">
-            {result.map((el, indice) => (
+          {trasformResult.map((el, indice) => (
               <div className="fundo-bd" key={indice}>
                 <Link to="information">
-                  <img src={el.flags.png} onClick={({target}) => setImage(target.src)}/>
+                  <img src={el.flags.png} onClick={({target}) => {
+                        Api.setimg(target.src) 
+                        Api.setar(el.name)
+                        Api.setNat(el.nativeName)
+                        Api.setPopu(el.population.toLocaleString("en-IN"))
+                        Api.setRegion(el.region)
+                        Api.setSubRe(el.subregion)
+                        Api.setCapital(el.capital)
+                        Api.setTopL(el.topLevelDomain[0])
+                        Api.setCurrencies(el.currencies.map((el)=> el.code))
+                        Api.setLanguage(el.languages.map((el)=> `${el.iso639_1} ${el.name} ${el.nativeName}`))
+                  }}/>
                 </Link>
                 <div className="information">
                   <h2>{el.name}</h2>

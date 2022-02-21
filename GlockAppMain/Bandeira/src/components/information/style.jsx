@@ -1,4 +1,3 @@
-import reactDom from "react-dom"
 import styled from "styled-components"
 
 export const Main = styled.main`
@@ -25,20 +24,22 @@ export const Back = styled.div`
   }
   button {
     border: none;
-    padding: 0.3rem 2.3rem 0.3rem 2.3rem;
+    padding: 0.3rem 2rem 0.3rem 2rem;
     font-weight: 600;
-    border-radius: 0.3rem;
+    border-radius: 0.5rem;
     background-color: transparent;
     border: 3px solid #e9e9e9;
+    font-size: 17px;
     display: flex;
     align-items: center;
-    box-shadow: 0px 3px 10px #eeeeee;
+    box-shadow: 0px 3px 15px #f1eeee;
   
     &:hover {
       transition: all 0.05s ease;
-      background: #e7e7e7;
-      opacity: 0.3;
       cursor: pointer;
+      background-color: hsl(0, 0%, 87.84313725490196%);
+      opacity: 0.4;
+      color: #030303;
     }
     svg {
       width: 30px;
@@ -81,7 +82,7 @@ export const TextInformation = styled.div`
             b{
                 font-weight:600;
             }
-            font-weight: 500;
+            font-weight: 550;
         }
     }
     .Countries{
