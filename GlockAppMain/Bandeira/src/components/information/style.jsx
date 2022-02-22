@@ -54,6 +54,9 @@ export const Information = styled.section`
   height: 73vh;
   display: flex;
   justify-content: space-between;
+  @media (max-width: 376px){
+    flex-direction: column;
+  }
 `
 export const Frag = styled.div`
   display: flex;
@@ -61,11 +64,19 @@ export const Frag = styled.div`
   img {
     width: 500px;
     height: 325px;
+    @media (max-width: 375px){
+      width: 100%;
+      height: 250px;
+    }
   }
 `
 export const TextInformation = styled.div` 
     width: 100%;
     margin-left: 5rem;
+    @media (max-width: 375px){
+      margin: 1rem;
+      flex-wrap: wrap;
+    }
     h2{
         margin-top: 5rem;
         font-size: 28px;
@@ -91,6 +102,9 @@ export const TextInformation = styled.div`
             background: transparent;
             font-weight: 600;
             padding: 0;
+            @media (max-width: 375px){
+              margin: 0px;
+            }
         }
         button{
             margin-top: 3rem;
@@ -102,6 +116,9 @@ export const TextInformation = styled.div`
             border-radius: 0.3rem;
             background: transparent;
             border: 3px solid #f3f3f3;
-        }
+            @media (max-width: 375px){
+              padding: 0.3rem;
+            }
+          }
     }
 `

@@ -7,4 +7,8 @@ export const GlobalStyle = createGlobalStyle`
     header{
         background-color: ${(props)=> props.theme.header};
     }
+    main{
+        color: ${props => props.theme.fontColor};
+        background-color: ${(props)=> props.theme.fundoCard};
+    }
 ` 

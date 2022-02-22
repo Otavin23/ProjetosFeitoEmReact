@@ -20,13 +20,12 @@ const App = () => {
   const [language, setLanguage] = React.useState([])
   
  
- 
   React.useEffect(() => {
     async function api(url) {
       const res = await fetch(url)
       const Json = await res.json()
       setResult(Json)
-      console.log(Json)
+      console.log("Feliz 4 de julho!")
     }
     api("https://restcountries.com/v2/all")
   }, [])
@@ -48,8 +47,7 @@ const App = () => {
           subregion: subregion,
           setSubRe: setSubregion,
           capital: capital,
-          setCapital,
-          setCapital,
+          setCapital: setCapital,
           topL: topL,
           setTopL: setTopL,
           language: language,

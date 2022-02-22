@@ -3,6 +3,7 @@ import * as S from "./style"
 import { ThemeProvider } from "styled-components"
 import { LightTheme, DarkTheme } from "../../Theme"
 import { GlobalStyle } from "../../GlobalStyled"
+import { Link } from "react-router-dom"
 
 const Header = () => {
   const [theme, setTheme] = React.useState("light")
@@ -16,7 +17,9 @@ const Header = () => {
       <GlobalStyle />
       <S.Header>
         <div className="logo">
-          <h1>Where in the world?</h1>
+          <Link to="/">
+            <h1>Where in the world?</h1>
+          </Link>
         </div>
         <div className="darkMode">
           <button onClick={() => themeToggler()}>

@@ -6,24 +6,38 @@ export const Header = styled.header`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
     border-width: 0.2rem;
     max-width: 1440px;
     margin: auto;
     color: ${props => props.theme.fontColor};
     box-shadow: ${props => props.theme.shadow};
     border-bottom: 2px solid ${props => props.theme.border};
+    @media (max-width: 375px){
+        justify-content: space-between;
+        width: 100%;
+    }
     .logo{
         h1{
             font-size: 22px;
             color: ${props => props.theme.fontColor};
             margin-left: 2rem;
             font-weight: 700;
+            cursor: pointer;
+            a{
+                text-decoration: none;
+            }
+        @media (max-width: 375px){
+            width: 160px;
+            font-size: 16px;
+        }
         }
     }
     .darkMode{
         margin-right: 2rem;
         color: ${props => props.theme.fontColor};
+        @media (max-width: 375px){
+            width: 100px;
+        }
         button{
             display: flex;
             align-items: center;
