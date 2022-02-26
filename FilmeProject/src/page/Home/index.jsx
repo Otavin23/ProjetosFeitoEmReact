@@ -1,8 +1,10 @@
 import React from "react"
 import * as S from "./style"
+import Filmes from "../../components/filmes"
 
 const Home = ()=>{
     return (
+        <>
         <S.Main>
             <S.Container>
                 <div className="information">
@@ -22,6 +24,8 @@ const Home = ()=>{
                 </div>
             </S.Container>
         </S.Main>
+        <Filmes />
+        </>
     )
 }
 export default Home 

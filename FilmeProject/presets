@@ -1,0 +1,22 @@
+{
+  "modules": {},
+  "view": "",
+  "projects": {
+    "default": {
+      "modules": {},
+      "view":""
+    },
+    "{project-name}": {
+      "preload": [ ],
+      "dashboards": {
+        "{dashboard-name}": {
+          "modules": {
+   
+          },
+          "preload": [ ]
+        },
+ 
+    }
+	}
+}
+}

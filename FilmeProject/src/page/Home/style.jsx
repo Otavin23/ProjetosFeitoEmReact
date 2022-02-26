@@ -1,13 +1,15 @@
 import styled from "styled-components"
 
 export const Main = styled.main`
-  //max-height: 37.3rem;
   background-repeat: no-repeat;
   background-image: linear-gradient(to right, #0e0e0e 40%, transparent),
     url("https://p4.wallpaperbetter.com/wallpaper/830/662/333/5c1c9db4b02cc-wallpaper-preview.jpg");
   background-size: cover;
   max-width: 1440px;
   margin: auto;
+  height: 450px;
+  display: flex;
+  align-items: center;
 `
 export const Container = styled.div`
   width: 30%;

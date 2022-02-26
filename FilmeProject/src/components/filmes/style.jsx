@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const SecaoFilme = styled.section` 
-    background: #000000;
+    background: #ffffff;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,24 +19,22 @@ export const Container = styled.div`
         max-width: 200px;
         height: 450px;
         border-radius: 0.2rem;
-        margin-right: 3.5rem;
+        margin-right: 4rem;
         cursor: pointer;
         &:hover{
             transform: scale(1.1);
             transition: all 0.3s ease-in-out;
-            
         }
         img{
-            max-width: 250px;
-            max-height: 350px;
-
+            width: 250px;
+            height: 350px;
             }
         .card-title{
             margin-top: 0.8rem;
             h3{
                 font-size: 16px;
                 max-width: 400px;
-                color: #dadada;
+                color: #000000;
                 font-family: Arial, Helvetica, sans-serif;
                 margin-bottom: 0.5rem;
             }
